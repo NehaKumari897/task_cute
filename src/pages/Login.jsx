@@ -9,7 +9,7 @@ import {
 } from "firebase/auth"
 import { auth } from "../firebase/config"
 
-const floatingItems = [
+{/*const floatingItems = [
   { content: "📋 3 tasks due", top: "8%",  left: "3%",  delay: 0,   color: "#ede9fe", border: "#c4b5fd" },
   { content: "✅ Task done!",   top: "18%", right: "2%", delay: 0.5, color: "#dcfce7", border: "#86efac" },
   { content: "🎯 High priority",top: "38%", left: "1%", delay: 0.8, color: "#fee2e2", border: "#fca5a5" },
@@ -18,7 +18,7 @@ const floatingItems = [
   { content: "💡 New idea",     top: "12%", right: "1%",delay: 0.3, color: "#fef3c7", border: "#fcd34d" },
   { content: "📅 Weekly plan",  top: "48%", right: "1%",delay: 0.7, color: "#e0f2fe", border: "#7dd3fc" },
   { content: "⭐ 5 completed",  top: "72%", right: "2%",delay: 1.1, color: "#ede9fe", border: "#c4b5fd" },
-]
+]*/}
 
 export default function Login() {
   const { user, login } = useAuth()
@@ -63,7 +63,7 @@ export default function Login() {
       <div style={{ position: "absolute", top: "40%",    left: "-60px",    width: 200, height: 200, borderRadius: "50%", background: "rgba(196,181,253,0.2)" }} />
       <div style={{ position: "absolute", bottom: "20%", right: "-40px",   width: 160, height: 160, borderRadius: "50%", background: "rgba(124,58,237,0.08)" }} />
 
-    {/* Floating emojis */}
+    {/* Floating emojis 
       {floatingItems.map((item, i) => (
   <motion.div key={i}
     animate={{ y: [0, -8, 0] }}
@@ -85,7 +85,7 @@ export default function Login() {
   >
     {item.content}
   </motion.div>
-))}
+))}*/}
 
       {/* Header above card */}
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function Login() {
             style={{ width: "100%", padding: "0.85rem", fontSize: "0.95rem", marginTop: "4px" }}
             disabled={loading}
           >
-            {loading ? "Loading..." : tab === "login" ? "Sign In ✦" : "Create Account ✦"}
+            {loading ? "Loading..." : tab === "login" ? "Sign In " : "Create Account "}
           </button>
         </form>
 
